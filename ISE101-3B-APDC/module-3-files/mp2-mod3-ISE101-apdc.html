@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQUERY FORM ELEMENTS</title>
+    <script type='text/javascript' src='scripts/simple.js'></script>
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="../jquery/jquery.mobile-1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="../jquery/jquery-1.11.3.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="../jquery/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+
+
+    <div data-role="page">
+        <div data-role="header" data-position="fixed">
+            <center>MACHINE PROBLEM 3.2 – MOBILE – ENROLLMENT FORM </center>
+        </div>
+        <div data-role="content">
+            <form action="#" method="post" id="frmEnroll" name="frmEnroll">
+
+                <!--Student Information -->
+
+                <div class="ui-field-contain">
+                    <label for="Student_Number">Student Name:</label>
+                    <input type="text" name="Student_Number" id="Student_Number" placeholder="Enter Student Number"
+                        value="" required>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="Last_Name">Last Name:</label>
+                    <input type="text" name="Last_Name" id="Last_Name" placeholder="" value="" required>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="First_Name">First Name:</label>
+                    <input type="text" name="First_Name" id="First_Name" placeholder="" value="" required>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="Middle_Name">Middle Name:</label>
+                    <input type="text" name="Middle_Name" id="Middle_Name" placeholder="" value="" required>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="Gender">Gender:</label>
+                    <input type="text" name="Gender" id="Gender" placeholder="" value="" required>
+                </div>
+
+
+                <div class="ui-field-contain">
+                    <label for="Email">Email Address:</label>
+                    <input type="text" name="Email" id="Email" placeholder="Enter Email Address" value="" required>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="Course">Course:</label>
+                    <input type="text" name="Course" id="Course" placeholder="" value="" required>
+                </div>
+
+                <!--Tuition Fees-->
+
+
+
+                <div class="ui-field-contain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Tuition Fees:</legend>
+                        <input type="radio" name="tuition" id="FirstYear" value="First Year 500.00" checked="checked">
+                        <label for="FirstYear">First Year 500.00</label>
+                        <input type="radio" name="tuition" id="SecondYear" value="Second Year 600.00">
+                        <label for="SecondYear">Second Year 600.00</label>
+                        <input type="radio" name="tuition" id="ThirdYear" value="Third Year 800.00">
+                        <label for="ThirdYear">Third Year 800.00</label>
+
+                        <input type="radio" name="tuition" id="FourthYear" value="Fourth Year 900.00">
+                        <label for="FourthYear">Fourth Year 900.00.</label>
+                    </fieldset>
+                </div>
+
+
+                <!-- CHECKBOXES FOR Other Fees -->
+                <div class="ui-field-contain">
+                    <fieldset data-role="controlgroup" data-mini="false">
+                        <legend>Other Fees:</legend>
+                        <input type="checkbox" name="regfee" id="regfee" value="Registration Fee 100.00"
+                            checked="checked">
+                        <label for="regfee">Registration Fee 100.00</label>
+                        <input type="checkbox" name="internetFee" id="internetFee" value="Internet Fee 100.00">
+                        <label for="internetFee">Internet Fee 100.00</label>
+                        <input type="checkbox" name="idFee" id="idFee" value="ID Fee 100.00">
+                        <label for="idFee">ID Fee 100.00</label>
+                        <input type="checkbox" name="libFee" id="libFee" value="Library Fee 50.00">
+                        <label for="libFee">Library Fee 50.00</label>
+                    </fieldset>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="Scholarship">Scholarship:</label>
+                    <select name="Scholarship" id="Scholarship">
+                        <option value="Select One">Select One</option>
+                        <option value="DEAN'S LISTER 200.00">DEAN'S LISTER 200.00</option>
+                        <option value="STUDENT ASSISTANT 500.00">STUDENT ASSISTANT 500.00</option>
+                        <option value="PRESIDENT LIST 700.00">PRESIDENT LIST 700.00</option>
+                        <option value="FULL SCHOLARSHIP 1000.00">FULL SCHOLARSHIP 1000.00</option>
+                    </select>
+                </div>
+                <!-- OUTPUT ELEMENT -->
+                <div class="ui-field-contain">
+                    <label for="Total_Amount">Total Amount:</label>
+                    <input type="number" step="any" name="Total_Amount" id="Total_Amount" style="text-align: center"
+                        placeholder="Total amount will be displayed here" value="" required readonly>
+                </div>
+
+                <!--ACTION/COMMAND BUTTONS-->
+                <div class="ui-field-contain">
+                    <button type="button" class="ui-shadow ui-btn ui-corner-all" name="btnCompute"
+                        id="btnCompute">COMPUTE TOTAL AMOUNT</button>
+                    <button type="button" class="ui-shadow ui-btn ui-corner-all" name="btnReceipt" id="btnReceipt">TOTAL AMOUNT TO PAY</button>
+                </div>
+                <div id="receipt"></div>
+
+
+        </div>
+
+        </form>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <center><small>Juan Dela Cruz Copyright &copy 2021</small></center>
+    </div>
+    </div>
+
+<script src="js/compute-fees-apdc.js"></script>
+
+</body>
+
+</html>
